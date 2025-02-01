@@ -10,7 +10,7 @@
 
 puts 'Seeding the database...'
 
-['user@user.com', 'admin@admin.com'].each do |email|
+[ 'user@user.com', 'admin@admin.com' ].each do |email|
   name = email.split('@').first.capitalize
   User.find_or_initialize_by(email: email) do |user|
     user.password = 'password'
@@ -20,7 +20,7 @@ puts 'Seeding the database...'
   end
 end
 
-['Project A', 'Project B', 'Project C'].each do |project_name|
+[ 'Project A', 'Project B', 'Project C' ].each do |project_name|
   random_user = User.take(2).sample
   random_status = Project::STATUSES.sample
   Project.find_or_create_by!(name: project_name, description: 'This is a project.', status: random_status, user: random_user)

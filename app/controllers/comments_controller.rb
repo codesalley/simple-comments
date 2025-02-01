@@ -24,5 +24,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.expect(comment: [ :content, :project_id, :parent_id, :user_id ])
   end
-
 end

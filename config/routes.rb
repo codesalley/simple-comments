@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, only: ['sessions', 'registrations']
+  devise_for :users, only: [ "sessions", "registrations" ]
   resources :projects do
     member do
       patch :update_status

@@ -40,7 +40,7 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 #
-gem 'slim' # Slim for templating.
+gem "slim" # Slim for templating.
 gem "slim-rails" # Slim is a template rails support.
 
 gem "pagy" # For pagination.
@@ -48,7 +48,7 @@ gem "pagy" # For pagination.
 gem "tailwindcss-ruby" # Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.
 gem "tailwindcss-rails" # Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.
 
-gem 'devise' # Flexible authentication solution for Rails with Warden.
+gem "devise" # Flexible authentication solution for Rails with Warden.
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -59,10 +59,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
-  gem 'rspec-rails', '~> 7.0.0'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'shoulda-matchers', '~> 6.0'
+  gem "rspec-rails", "~> 7.0.0"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "shoulda-matchers", "~> 6.0"
 end
 
 group :development do
