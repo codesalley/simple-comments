@@ -178,6 +178,7 @@ GEM
     nokogiri (1.18.2-x86_64-linux-musl)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (9.3.3)
     parallel (1.26.3)
     parser (3.3.7.0)
       ast (~> 2.4.1)
@@ -393,6 +394,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   importmap-rails
+  pagy
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)

@@ -43,6 +43,8 @@ gem "thruster", require: false
 gem 'slim' # Slim for templating.
 gem "slim-rails" # Slim is a template rails support.
 
+gem "pagy" # For pagination.
+
 gem "tailwindcss-ruby" # Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.
 gem "tailwindcss-rails" # Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.
 

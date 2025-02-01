@@ -19,10 +19,16 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <div>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+    <main class="container mx-auto px-5 flex flex-col justify-center ">
+      <% if user_signed_in? %>
+        <div class="flex justify-end items-center   p-2">
+          <span class="mr-2"><%= current_user.name %></span>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: " border border-red-500 text-red-500 px-2 py-1 rounded-md" %>
+        </div>
+      <% end %>
+      <div class="w-full flex flex-col justify-center items-center mt-2">
+        <p class="notice text-green-500"><%= notice %></p>
+        <p class="alert text-red-600"><%= alert %></p>
       </div>
       <%= yield %>
     </main>

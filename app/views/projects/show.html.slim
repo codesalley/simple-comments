@@ -1,0 +1,24 @@
+content_for :title, "Showing project"
+
+div.md:w-2/3.w-full
+  h1.font-bold.text-4xl Showing project
+  = render @project
+
+  h2.font-bold.text-xl.mt-5 Project Status
+  ul.mt-2.mb-6.border-b.border-gray-200.pb-2
+    - Project::STATUSES.each do |status|
+      li.inline-block.mr-2
+        = button_to status, update_status_project_path(@project, status: status), method: :patch, class: "rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium #{'border border-blue-500' if @project.status == status}"
+
+  - if @project.user_id == current_user.id
+    = link_to "Edit this project", edit_project_path(@project), class: "mt-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium"
+  = link_to "Back to projects", projects_path, class: "ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium"
+  - if @project.user_id == current_user.id
+    div.inline-block.ml-2
+      = button_to "Destroy this project", @project, method: :delete, class: "mt-2 rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium"
+
+  h2.font-bold.text-2xl.mt-5 Comments
+  div.mt-2
+    = render @project.comments
+    div.mt-2
+      = render "comments/form", project: @project, comment: Comment.new
