@@ -83,7 +83,6 @@ production:
 #     <<: *default
 #     database: homey_production
 #     username: homey
-#     password: <%= ENV["HOMEY_DATABASE_PASSWORD"] %>
 #   cache:
 #     <<: *primary_production
 #     database: homey_production_cache
