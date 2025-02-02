@@ -1,24 +1,24 @@
-# README
+# Homey
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Q&A Documentation
 
-Things you may want to cover:
+### Q1: Authentication
+**Question:** Should we require users to identify themselves before using this service (authentication)?
 
-* Ruby version
+**Answer:** Yes, users should be asked to sign in or create an account before having access to the platform.
 
-* System dependencies
+### Q2: Project Permissions
+**Question:** Who has the permission to create, edit, or delete a project?
 
-* Configuration
+**Answer:** Once a user is signed in, they can create, edit, and delete a project.
 
-* Database creation
+### Q3: Commenting on Projects
+**Question:** Who is qualified to leave a comment on a project?
 
-* Database initialization
+**Answer:** Anyone with a valid account.
 
-* How to run the test suite
+### Q4: Comment Replies
+**Question:** Should comments have replies? If yes, who is allowed to reply to a comment?
 
-* Services (job queues, cache servers, search engines, etc.)
+**Answer:** Anyone with a valid account can comment or reply to another users comments.
 
-* Deployment instructions
-
-* ...
